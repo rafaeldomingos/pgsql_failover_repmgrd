@@ -1,0 +1,12 @@
+node_id=2
+node_name=node2
+data_directory='/var/lib/postgresql/16/main'
+conninfo='host=172.20.30.220 user=repmgr dbname=repmgr'
+failover=automatic
+ssh_options='-q -o ConnectTimout=10'
+promote_command='repmgr standby promote -f /etc/repmgr.conf --log-to-file'
+follow_command='repmgr standby follow -f /etc/repmgr.conf --log-to-file'
+log_file='/var/log/postgresql/repmgr.log'
+log_level=DEBUG
+reconnect_attempts=4
+reconnect_interval=5
